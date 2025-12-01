@@ -48,7 +48,7 @@ func clone(_board):
 
 func get_moveable_positions():
 	match piece_type:
-		PEON: return pawn_threat_pos()
+		PEON: return pawn_move_pos()
 		ALFIL: return bishop_threat_pos()
 		TORRE: return rook_threat_pos()
 		CABALLO: return knight_threat_pos()
@@ -58,7 +58,7 @@ func get_moveable_positions():
 
 func get_threatened_positions():
 	match piece_type:
-		PEON: return pawn_move_pos()
+		PEON: return pawn_threat_pos()
 		ALFIL: return bishop_threat_pos()
 		TORRE: return rook_threat_pos()
 		CABALLO: return knight_threat_pos()
